@@ -1,0 +1,108 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Nefuthesis</title>
+  <meta name="description" content="东北林业大学硕博士毕业论文 LaTeX 模板">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Nefuthesis</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">东北林业大学硕博士毕业论文 LaTeX 模板</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/dustincys/NEFUThesis/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/dustincys/NEFUThesis/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/dustincys/NEFUThesis" class="code">View Nefuthesis on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a id="东北林业大学硕博士毕业论文latex模板" class="anchor" href="#%E4%B8%9C%E5%8C%97%E6%9E%97%E4%B8%9A%E5%A4%A7%E5%AD%A6%E7%A1%95%E5%8D%9A%E5%A3%AB%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87latex%E6%A8%A1%E6%9D%BF" aria-hidden="true"><span class="octicon octicon-link"></span></a>东北林业大学硕博士毕业论文LaTeX模板</h1>
+
+<hr>
+
+<blockquote>
+<p>是否，您知道东林的毕业论文的Word模板本身自带错误？，例如：<br>
+1. 奇偶页页眉不正确，正文中标题中英文字体不正确<br>
+2. 封面中毛笔字“东北林业大学”这几个字，就有两个版本<br>
+3. 参考文献格式还在使用上个世纪九十年代的标准，由于这个标准比较模糊导致各种版本泛滥……<br>
+是否，您的导师为了您的论文排版错误异常烦恼？<br>
+是否，您已厌倦了承受不尽的格式吐槽？<br>
+是否，您希望将宝贵的时间更多的放在论文内容规划上？<br>
+是否，您希望您与您的导师之间的学术沟通更加高效、流畅？<br>
+是否，您有种特别无助的感觉？<br>
+别指望学校了！！！<br>
+LaTeX模板，专治各种不服！！！</p>
+</blockquote>
+
+<h2>
+<a id="该模板有哪些优点" class="anchor" href="#%E8%AF%A5%E6%A8%A1%E6%9D%BF%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E7%82%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>该模板有哪些优点？</h2>
+
+<ol>
+<li>main.tex中参数设置为博士时，自动生成中英文双目录</li>
+<li>自动书籍排版，例如中英文参考文献各站一页</li>
+<li>自动排版奇偶页页眉</li>
+<li>自动生成参考文献以及图，表，公式序号</li>
+<li>中英文目录以及各章节标题严格安装官方规定采用两种字体</li>
+<li>格式基本与word模板一致，排版只在一瞬间</li>
+</ol>
+
+<h2>
+<a id="如何使用该模板" class="anchor" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%AF%A5%E6%A8%A1%E6%9D%BF" aria-hidden="true"><span class="octicon octicon-link"></span></a>如何使用该模板？</h2>
+
+<p>编译方法在Makefile中有详细说明，即依次敲人下面命令即可</p>
+
+<pre><code>xelatex main.tex
+xelatex main.tex
+bibtex main
+xelatex main.tex
+</code></pre>
+
+<p>对于不同版本的操作系统相应的字体设置有些差别。
+如果是windows xp 需要替换setup/package.tex中字体设置部分的 KaiTi为KaiTi_GB2312，FangSong为FangSong_GB2312。
+对于Linux、mac安装好windows字体即可。</p>
+
+<p>注意：学校没有官方的LaTeX模板，<a href="http://creativecommons.org/licenses/by-nc/4.0/">本模板仅供学习</a>。</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/dustincys" class="avatar"><img src="https://avatars2.githubusercontent.com/u/2177600?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/dustincys">dustincys</a> maintains <a href="https://github.com/dustincys/NEFUThesis">Nefuthesis</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/dustincys/NEFUThesis/tarball/master" class="tar">tar</a><a href="https://github.com/dustincys/NEFUThesis/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
