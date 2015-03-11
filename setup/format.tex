@@ -24,7 +24,7 @@
 
 \renewcommand\contentsname{目录}%目~~~~录
 
-\CTEXsetup[number={\arabic{chapter}}]{chapter}
+\CTEXsetup[number={\arabic{chapter}},name={,}]{chapter}
 \renewcommand\chaptername{~\thechapter~}
 
 \setcounter{secnumdepth}{4} \setcounter{tocdepth}{2}
@@ -53,10 +53,28 @@
 
 % 缩小目录中各级标题之间的缩进，使它们相隔一个字符距离，也就是12pt
 \makeatletter
-\renewcommand*\l@chapter{\@dottedtocline{0}{0em}{4em}}% 控制英文目录： 细点\@dottedtocline  粗点\@dottedtoclinebold
-\renewcommand*\l@section{\@dottedtocline{1}{1.5em}{1.8em}}
-\renewcommand*\l@subsection{\@dottedtocline{2}{2.5em}{2.5em}}
 
+\def\@dottedtoclinebold#1#2#3#4#5{%
+\ifnum #1>\c@tocdepth \else
+\vskip \z@ \@plus.2\p@
+{\leftskip #2\relax \rightskip \@tocrmarg \parfillskip -\rightskip
+\parindent #2\relax\@afterindenttrue
+\interlinepenalty\@M
+\leavevmode
+\@tempdima #3\relax
+\advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+{#4}\nobreak
+\leaders\hbox{$\m@th
+\mkern \@dotsep mu\hbox{\ifnum0=#1 \bf\fi.}\mkern \@dotsep
+mu$}\hfill
+\nobreak
+\hb@xt@\@pnumwidth{\hfil \normalfont \normalcolor \ifnum0=#1 \bf\fi#5}%目录层为1时，页码粗体
+\par}%
+\fi}
+
+\renewcommand*\l@chapter{\@dottedtoclinebold{0}{0em}{4em}}% 控制英文目录： 细点\@dottedtocline  粗点\@dottedtoclinebold
+\renewcommand*\l@section{\@dottedtocline{1}{0em}{1.8em}}
+\renewcommand*\l@subsection{\@dottedtocline{2}{0em}{2.5em}}
 
 % 定义页眉和页脚 使用fancyhdr 宏包
 %\newcommand{\makeheadrule}{
@@ -342,7 +360,7 @@
       \markboth{摘要}{摘要}
       %\vspace{1em}
       \addcontentsline{toc}{chapter}{\xiaosi 摘要}
-      \addcontentsline{toe}{chapter}{\bfseries \xiaosi Abstract (In Chinese)}
+      \addcontentsline{toe}{chapter}{\bfseries \xiaosi Abstract in Chinese}
       %\BiAppendixChapter{摘要}{}
       \setcounter{page}{1}
       \song\defaultfont
@@ -354,7 +372,7 @@
 
       %%%%%%%%%%%%%%%%%%%   English Abstract  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       \clearpage
-      \BiAppendixChapter{\textbf\timesnewroman{Abstract}}{Abstract (In English)} % 不要挪到下一行，生成正确的摘要toc
+      \BiAppendixChapter{\textbf\timesnewroman{Abstract}}{Abstract in English} % 不要挪到下一行，生成正确的摘要toc
       \@eabstract
       \vspace{\baselineskip}
 
@@ -373,9 +391,9 @@
 \setlength\leftmarginv {0pt}
 \setlength\leftmarginvi {0pt}
 
-\def\engcontentsname{\bfseries Contents}
+\def\engcontentsname{\bfseries English Catalog}
 \newcommand\tableofengcontents{
-   \pdfbookmark[0]{Contents}{econtent}
+   \pdfbookmark[0]{English Catalog}{English Catalog}
      \@restonecolfalse
    \chapter*{\engcontentsname  %chapter*上移一行，避免在toc中出现。
        \@mkboth{%
