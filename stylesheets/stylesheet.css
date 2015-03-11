@@ -903,6 +903,58 @@ footer .owner p a {
   box-sizing: border-box;
 }
 
+
+
+/*********************************************************\
+ * baidu share
+\*********************************************************/
+
+.bdsharebuttonbox a{
+	width: 31px!important;
+	height: 32px!important;
+	margin: 0 6px 0 0!important;
+	background: url(/slides/share_icon.png) no-repeat!important;
+}
+
+
+.bdsharebuttonbox a.bds_tsina {
+	background-position: -36px 0!important;
+}
+.bdsharebuttonbox a.bds_renren {
+	background-position: -108px 0!important;
+}
+.bdsharebuttonbox a.bds_qzone {
+	background-position: 0 0!important;
+}
+.bdsharebuttonbox a.bds_tqq {
+	background-position: -72px 0!important;
+}
+.bdsharebuttonbox a.bds_weixin {
+	background-position: -179px 0!important;
+}
+.bdsharebuttonbox a.bds_more {
+	background-position: -144px 0!important;
+}
+
+.shareto {
+	padding-top: 1em;
+	max-width: 100%;
+	display: block;
+	border-top: 1px solid #cccccc;
+}
+.shareto span {
+	float: left;
+	padding-right: 15px;
+	line-height: 32px;
+}
+/* duoshuo */
+
+#ds-reset .ds-avatar{
+	box-shadow: none !important;
+	background: none !important;
+}
+
+
 .highlight  { background: #ffffff; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
