@@ -4,3 +4,8 @@
 *.out
 *.toc
 *.pdf
+*.bbl
+*.swp
+*.blg
+*.thm
+*.toe

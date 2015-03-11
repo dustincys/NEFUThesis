@@ -1,15 +1,7 @@
 %!Tex Program = xelatex
 % -*-coding: utf-8 -*-
 
-
 \usepackage{graphicx}
-
-%\usepackage[a4paper,text={162true mm,249true mm},left=24true mm,
-%            head=24true mm, top=24true mm, bottom=24true mm,
-%           headheight=14true mm, headsep=10true mm
-%           ]{geometry}% 东北林业大学要求的宽度
-
-%\usepackage[a4paper,]{geometry}%四周都是24mm
 \usepackage[a4paper,
 left=24true mm,right=24true mm, top=25true mm, bottom=23true mm,
 headheight=14true mm,
@@ -17,11 +9,9 @@ headsep=7true mm,
 footskip=7true mm]{geometry}% 东北林业大学要求的宽度
 \usepackage{layout}
 
-
 \usepackage{titlesec}               % 控制标题的宏包
 \usepackage{titletoc}                   % 控制目录的宏包
 \usepackage{fancyhdr}                   % fancyhdr宏包 页眉和页脚的相关定义
-%\usepackage[UTF8]{ctex}
 \usepackage{color}          % 支持彩色
 \usepackage{amsmath}        % AMSLaTeX宏包 用来排出更加漂亮的公式
 \usepackage{amssymb}
@@ -122,11 +112,8 @@ footskip=7true mm]{geometry}% 东北林业大学要求的宽度
 
 \usepackage{enumitem}       %使用enumitem宏包,改变列表项的格式
 \usepackage{calc}           %长度可以用+ - * / 进行计算
-
-
-%%\usepackage{txfonts}
+\usepackage[amsmath,thmmarks,hyperref]{ntheorem}% 定理类环境宏包，其中 amsmath 选项用来兼容 AMS LaTeX 的宏包
 \usepackage{mathtools}
-
 \usepackage{bm}              % 处理数学公式中的黑斜体的宏包
 
 \usepackage[xetex,
@@ -141,9 +128,6 @@ footskip=7true mm]{geometry}% 东北林业大学要求的宽度
             breaklinks=true,
             naturalnames  %与algorithm2e宏包协调
             ]{hyperref}
-%\usepackage{fontenc}
-%xunicode xunicode Ross Moore’s xunicode package is now automatically loaded for users of both XELATEX and LuaLATEX.
-\usepackage[BoldFont,SlantFont]{xeCJK}
 \defaultfontfeatures{Mapping=tex-text}
 
 \xeCJKsetemboldenfactor{1}%只对随后定义的CJK字体有效

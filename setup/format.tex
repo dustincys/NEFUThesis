@@ -1,13 +1,30 @@
 %!Tex Program = xelatex
 % -*-coding: utf-8 -*-
-\allowdisplaybreaks[4]
 
-%\CJKcaption{gb_452_UTF8} %_UTF8 xelate不用
+\theoremstyle{plain}
+\theorembodyfont{\song\rmfamily}
+\theoremheaderfont{\hei\rmfamily}
+\newtheorem{definition}{\hei 定义}[chapter]
+\newtheorem{example}{\hei 例}[chapter]
+\newtheorem{algo}{\hei 算法}[chapter]
+\newtheorem{theorem}{\hei 定理}[chapter]
+\newtheorem{axiom}{\hei 公理}[chapter]
+\newtheorem{proposition}{\hei 命题}[chapter]
+\newtheorem{lemma}{\hei 引理}[chapter]
+\newtheorem{corollary}{\hei 推论}[chapter]
+\newtheorem{remark}{\hei 注解}[chapter]
+\newenvironment{proof}{\noindent{\hei 证明：}}{\hfill $ \square $ \vskip 4mm}
+\theoremsymbol{$\square$}
+\setlength{\theorempreskipamount}{0pt}
+\setlength{\theorempostskipamount}{-2pt}
+
+\allowdisplaybreaks[4]
 
 \setlength{\parindent}{2em}
 
 \renewcommand\contentsname{目录}%目~~~~录
 
+\CTEXsetup[number={\arabic{chapter}}]{chapter}
 \renewcommand\chaptername{~\thechapter~}
 
 \setcounter{secnumdepth}{4} \setcounter{tocdepth}{2}

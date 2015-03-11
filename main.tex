@@ -1,14 +1,14 @@
 %!Tex Program = xelatex
 % -*-coding: utf-8 -*-
 %  \author{初砚硕}
-\def\usewhat{xelatex} % 定义编译方式 pdflatex, dvipdfmx, or xelatex____ps:只有xelatex 能使用Arial字体
 
-\def\version{1.1} % 模板版本号
+\def \xuewei{Doctor} % 定义学位 Doctor or Master
 
-\def\xueke{Engineering} % 定义学科 Engineering, Science, Management, or Arts
+\def\xueke{Science} % 定义学科 Engineering, Science, Management, or Arts
 
-\documentclass[12pt,openany,twoside]{book}
+\documentclass[cs4size,openany,twoside,UTF8,normalindentfirst,nofonts]{ctexbook}
 
+\input{setup/type.tex}    % 硕博类型
 \input{setup/package.tex} % 引用的宏包
 
 \graphicspath{{figures/}} %定义所有的eps文件在 figures 子目录下
@@ -33,6 +33,8 @@
 
 %\addtocontents{toc}{\protect\vskip1\baselineskip} % 中文目录增加空行
 
+\ifxueweidoctor
+\tableofengcontents % 英文目录
 \clearpage{\pagestyle{empty}\cleardoublepage}     % 清除目录后面空页的页眉和页脚
 
 \mainmatter\defaultfont\sloppy\raggedbottom
@@ -56,10 +58,8 @@
 \addcontentsline{toe}{chapter}{\bfseries  References} % 参考文献加入到英文目录
 \addtolength{\bibsep}{-0.8em}
 %\nocite{*}
-\renewcommand\bibname{参考文献}%book 类
 %如果文档类是article之类的, 用\renewcommand\refname{参考文献}
 %如果文档类是book之类的, 用\renewcommand\bibname{参考文献}
-
 \bibliography{reference/reference}
 
 \include{appendix/appendix}% 致谢
