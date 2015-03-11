@@ -54,7 +54,8 @@
 }
 
 \newcommand{\BiAppChapter}[2]    % 该附录命令适用于有章节的完整附录
-{\phantomsection  \chapter{#1}   %\markboth{\MakeUppercase{#1}}{\MakeUppercase{#1}} %为了winedt中project tree 中toc正确显示，不要挪到下一行；
+{\phantomsection  
+  \chapter{#1}   %\markboth{\MakeUppercase{#1}}{\MakeUppercase{#1}} %为了winedt中project tree 中toc正确显示，不要挪到下一行；
 \addcontentsline{toe}{chapter}{\bfseries \xiaosi Appendix \thechapter~~#2}
 }
 

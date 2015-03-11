@@ -10,8 +10,16 @@
 
 \newcommand{\englishthesistime}{December, 2010}    %封面底部的日期英文形式
 
-\ctitle{东林硕/博士毕业论文\XeLaTeX 模版}  %封面用论文标题，自己可手动断行
+\ifxueweimaster
 \cdegree{硕士}
+\edegree{Master of \exueke}
+\fi
+\ifxueweidoctor
+\cdegree{博士}
+\edegree{Doctor of \exueke}
+\fi
+
+\ctitle{东林硕/博士毕业论文\XeLaTeX 模版}  %封面用论文标题，自己可手动断行
 \csubject{某某专业}                 %(~按二级学科填写~)
 \caffil{某某学院} %（在校生填所在系名称，同等学力人员填工作单位）
 \cauthor{某某某}
@@ -24,7 +32,6 @@
 \cdatedegree{\cattaindegree}
 
 \etitle{\englishthesistitle}
-\edegree{Master of \exueke}
 \esubject{Computer Science and Technology}  %英文二级学科名
 \eaffil{College of  Information and Computer Engineering}%英文单位 %换行用\newline，不要用\\
 \eauthor{ABCD}                   %作者姓名 （英文）

@@ -57,12 +57,12 @@
 \addcontentsline{toc}{chapter}{参考文献}      % 参考文献加入到中文目录
 \addcontentsline{toe}{chapter}{\bfseries  References} % 参考文献加入到英文目录
 \addtolength{\bibsep}{-0.8em}
-%\nocite{*}
+\nocite{*}  %若将此命令屏蔽掉，则未引用的文献不会出现在文后的参考文献列表中。
 %如果文档类是article之类的, 用\renewcommand\refname{参考文献}
 %如果文档类是book之类的, 用\renewcommand\bibname{参考文献}
 \bibliography{reference/reference}
 
-\include{appendix/appendix}% 致谢
+\include{appendix/appA}% 致谢
 \include{appendix/publications}    % 所发文章
 \include{appendix/acknowledgements}% 致谢
 \include{appendix/Authorization}   % 承诺
