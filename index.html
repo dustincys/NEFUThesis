@@ -8,8 +8,17 @@
 
   <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
   <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+
 
   <title>Nefuthesis</title>
   <meta name="description" content="东北林业大学硕博士毕业论文 LaTeX 模板">
@@ -84,8 +93,82 @@ xelatex main.tex
 
 <p>注意：学校没有官方的LaTeX模板，<a href="http://creativecommons.org/licenses/by-nc/4.0/">本模板仅供学习</a>。</p>
         </article>
-      </div>
+<div class="shareto">
+<span class="hidden-xs">分享给小伙伴们吧：</span>
+<div class="bdsharebuttonbox" data-tag="share_1">
+	<a class="bds_tsina" data-cmd="tsina" href="#"></a>
+	<a class="bds_renren" data-cmd="renren" href="#"></a>
+	<a class="bds_qzone" data-cmd="qzone" href="#"></a>
+	<a class="bds_tqq" data-cmd="tqq" href="#"></a>
+	<a class="bds_weixin" data-cmd="weixin" href="#"></a>
+	<a class="bds_more" data-cmd="more" href="#"></a>
+</div>
+</div>
+<script>
+	function getImgs() {
+		var all = document.getElementsByTagName('img');
+		var elements = new Array();
+		for (var e = 0; e < all.length; e++) {
+			elements[elements.length] = all[e];
+		}
+		return elements;
+	}
+
+	var sharePicture;
+	var imgs = getImgs();
+
+	if(imgs != null && imgs.length > 0){
+		sharePicture = imgs[0].src;
+	}
+
+	sharePicture = sharePicture || 'https://2s66lw.bl3301.livefilestore.com/y2pIlAqf_XWwsDHjEaTPBHGkXmKLncn3uUoXwx-ViqlHkaF8BT-1wp1teBnSgDDnVcu7MsqiOeARHr_LfRos5IJfaCkMLBqp-L9NX7_9gpIDvU_cwqRQ0PCaOwVN1_rDQCeIijX4pW8dIhZxLcy_j_TQQ/h_large_LtVW_53710001b3612f76.jpg';
+
+	var shareText = document.title;
+	var shareUrl = window.location.href;
+	var myList = document.getElementsByTagName("p");
+	var shareDesc;
+
+	for(var i = 0; i < myList.length; i++) {
+		shareDesc += myList[i].innerHTML;
+		if(shareDesc.length > 50)
+			break;
+	}
+	if(shareDesc.length > 50){
+		shareDesc = shareDesc.slice(9, 50);
+	}
+	shareDesc += "……";
+
+	window._bd_share_config = {
+		common : {
+			bdText : shareText,
+			bdUrl : shareUrl,
+			bdPic : sharePicture,
+			bdDesc : shareDesc
+		},
+		share : [{
+			"tag" : "share_1",
+			"bdSize" : 32
+		}]
+	}
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"dustincys"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
     </div>
+      </div>
     <footer>
       <div class="owner">
       <p><a href="https://github.com/dustincys" class="avatar"><img src="https://avatars2.githubusercontent.com/u/2177600?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/dustincys">dustincys</a> maintains <a href="https://github.com/dustincys/NEFUThesis">Nefuthesis</a></p>
@@ -103,6 +186,6 @@ xelatex main.tex
     <p class="name"></p>
   </div>
 
-  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=40045081" charset="UTF-8"></script> 
 </body>
 </html>
